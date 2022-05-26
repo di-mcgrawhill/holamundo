@@ -7,7 +7,11 @@ directorio_principal = os.path.dirname(__file__)
 
 
 class MainWindow(QMainWindow):
+    """
+    Clase MainWindow que hereda de QMainWindow.
 
+    Ventana principal de la aplicación.
+    """
     def __init__(self):
         super(MainWindow, self).__init__()
 
@@ -28,11 +32,13 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(widget)
 
 def main():
+    """"
+    Punto de entrada a la aplicación.
+
+    Construye un objecto MainWindow y lo muestra.    
+    """
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     
     app.exec()
-
-if (__name__) == "__main__":
-    main()
